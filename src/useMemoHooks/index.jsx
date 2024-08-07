@@ -14,13 +14,20 @@ const Memo = () => {
     return num;
   };
 
-
   const checkData = useMemo(() => {
     return countNumber(myNum);
   }, [myNum]);
 
   return (
-    <>
+    <div
+      style={{
+        display: "flex",
+        flexDirection: "column",
+        justifyContent: "center",
+        alignItems: "center",
+        marginTop:"20px"
+      }}
+    >
       <button onClick={getValue} style={{ backgroundColor: "red" }}>
         Counter
       </button>
@@ -28,7 +35,7 @@ const Memo = () => {
       <button onClick={() => setShow(!show)}>
         {show ? "You clicked me" : "Click me plz"}
       </button>
-    </>
+    </div>
   );
 };
 
